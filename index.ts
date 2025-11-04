@@ -16,6 +16,10 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/ivr', ivrRoutes);
 
+app.get('/', (req, res) => {
+    res.send('API de Reportes IVR funcionando');
+});
+
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en ${PORT}`);
 });
